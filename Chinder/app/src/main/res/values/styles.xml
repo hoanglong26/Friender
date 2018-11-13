@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/amarisLight</item>
+        <item name="colorPrimaryDark">@color/amaris</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionbar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="FloatingActionButton">
+        <item name="colorAccent">@color/amaris</item>
+    </style>
+
+    <style name="Toolbar">
+        <item name="android:textColorPrimary">@color/md_black_1000</item>
+        <item name="android:textColorSecondary">@color/md_black_1000</item>
+        <item name="android:colorAccent">@color/md_white_1000</item>
+        <item name="colorPrimary">@color/md_white_1000</item>
+
+        <!--<item name="actionOverflowMenuStyle">@style/CMOptionsMenu</item>-->
+    </style>
+</resources>
