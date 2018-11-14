@@ -21,7 +21,6 @@
             android:theme="@style/Toolbar"
             app:layout_scrollFlags="scroll|enterAlways|snap"
             android:background="?attr/colorPrimary"
-            app:title=""
             >
 
             <TextView
