@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_loading"
+    tools:context=".LoadingActivity">
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:src="@drawable/bg_loading"/>-->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40sp"
+        android:text="aFriend"
+        android:textAlignment="center"
+        android:textColor="#EE6723"
+        android:textSize="40sp"
+        android:textStyle="" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5sp"
+        android:text="Meet the people of Amaris"
+        android:textAlignment="center"
+        android:textColor="#EE6723"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/loginNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/gradient"
+        android:paddingLeft="80dp"
+        android:paddingTop="20dp"
+        android:paddingRight="80dp"
+        android:paddingBottom="20dp"
+        android:text="LOGIN NOW"
+        android:textColor="@color/md_white_1000"
+        android:textSize="16sp" />
+</RelativeLayout>
