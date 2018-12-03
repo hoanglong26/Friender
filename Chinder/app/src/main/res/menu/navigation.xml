@@ -2,14 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_history"
-        android:icon="@drawable/ic_favorite"
-        android:title="Matching" />
+        android:id="@+id/navigation_play"
+        android:icon="@drawable/card"
+        android:title="Match" />
 
     <item
-        android:id="@+id/navigation_about"
-        android:icon="@drawable/ic_rss_feed"
-        android:title="Events" />
+        android:id="@+id/navigation_group"
+        android:icon="@drawable/ic_group"
+        android:title="Groups" />
+
+    <item
+        android:id="@+id/navigation_message"
+        android:icon="@drawable/ic_chat"
+        android:title="Messages" />
+
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings" />
 
 
 </menu>

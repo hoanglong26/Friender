@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+
     }
 
     @Override
@@ -67,21 +68,33 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.navigation_history:
-
-                        return true;
-                    case R.id.navigation_about:
-                        Intent myIntent = new Intent(getApplicationContext(), LoadMoreActivity.class);
+                    case R.id.navigation_play:
+                        Intent myIntent = new Intent(getApplicationContext(), SafeOrWildActivity.class);
                         getApplicationContext().startActivity(myIntent);
-//                      getSupportActionBar().setTitle("Favorite");
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                        return true;
+                    case R.id.navigation_group:
+                        myIntent = new Intent(getApplicationContext(), GroupsActivity.class);
+                        getApplicationContext().startActivity(myIntent);
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                        return true;
+                    case R.id.navigation_message:
+                        myIntent = new Intent(getApplicationContext(), MessagesActivity.class);
+                        getApplicationContext().startActivity(myIntent);
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                        return true;
+                    case R.id.navigation_setting:
+                        myIntent = new Intent(getApplicationContext(), SettingActivity.class);
+                        getApplicationContext().startActivity(myIntent);
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                         return true;
                 }
                 return false;
             }
         });
 
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+//        setSupportActionBar(toolbar);
+//        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
 
         //Setup for account display on drawer
@@ -173,7 +186,6 @@ public class MainActivity extends AppCompatActivity {
 //                                finish();
                             }
                             break;
-
                         }
                         return true;
                     }
@@ -184,16 +196,11 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onItemRemoved(int count) {
-                Log.d(TAG, "onItemRemoved: " + count);
                 if (count == 0) {
-                    mSwipeView.addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(0)))
-                            .addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(1)))
-                            .addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(2)))
-                            .addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(3)))
-                            .addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(4)))
-                            .addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(5)))
-                            .addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(6)))
-                            .addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(7)));
+                    Intent myIntent = new Intent(getApplicationContext(), GoWildActivity.class);
+                    myIntent.putExtra("type", "safe");
+                    getApplicationContext().startActivity(myIntent);
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 }
             }
         });
@@ -210,14 +217,11 @@ public class MainActivity extends AppCompatActivity {
                         .setSwipeOutMsgLayoutId(R.layout.tinder_swipe_out_msg_view));
 
 
-        mSwipeView.addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(0)))
-                .addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(1)))
-                .addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(2)))
-                .addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(3)))
-                .addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(4)))
-                .addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(5)))
-                .addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(6)))
-                .addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(7)));
+        mSwipeView.addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(3),"MALPARTY Xavier", "AMAVIE","IT","English, French, Chinese"))
+                .addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(1),"TONG Trong Nhan","AMAVIE","Hubs Management","English, Vietnamese"))
+                .addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(2),"CHEN Yinci","AMACN","Recruitment","English, French, Chinese"))
+                .addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(0),"BUFFET Marie","AMAIDFSI","Business","German, English, French"))
+                .addView(new TinderDirectionalCard(getApplicationContext(), listImg.get(4),"TRAN Ngoc Kim Anh","AMAVIE","Recruitment","English, Vietnamese"));
     }
 
     @OnClick(R.id.rejectBtn)
@@ -232,7 +236,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.origin, menu);
+//        getMenuInflater().inflate(R.menu.origin, menu);
         return super.onCreateOptionsMenu(menu);
     }
 }

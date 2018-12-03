@@ -12,16 +12,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon_hdpi"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionbar" />
         <activity
             android:name=".LoadMoreActivity"
             android:label="@string/app_name"
@@ -29,16 +25,88 @@
         <activity
             android:name=".LoadingActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionbar">
+            android:theme="@style/AppTheme.NoActionbar" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"
+        <activity
+            android:name=".LoginActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionbar"/>
+            android:theme="@style/AppTheme.NoActionbar" />
+        <activity
+            android:name=".UserSetting"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionbar" />
+        <activity
+            android:name=".Filter"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionbar">
+
+        </activity>
+        <activity
+            android:name=".SafeOrWildActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionbar" >
+
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionbar" />
+        <activity
+            android:name=".GoWildActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionbar">
+
+
+        </activity>
+        <activity
+            android:name=".ChattingActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionbar">
+
+
+        </activity>
+        <activity
+            android:name=".MessagingActivity"
+            android:label="@string/title_activity_messaging"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".demo.styled.StyledMessagesActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".demo.styled.StyledDialogsActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SettingActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GroupsActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MessagesActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".QuestionActivity"
+            android:label="@string/title_activity_question"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ResultActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+        </activity>
+
     </application>
 
 </manifest>

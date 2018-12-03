@@ -24,10 +24,17 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="5dp"
             android:text="Login"
             android:textColor="@color/md_white_1000"
             android:textSize="30sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="with your Amaris credential"
+            android:textColor="@color/md_grey_300"
+            android:textSize="18sp" />
 
         <android.support.design.widget.TextInputLayout
             style="@style/LoginTextInputLayoutStyle"
@@ -41,7 +48,8 @@
                 android:textCursorDrawable="@null"
                 android:textColor="@color/md_white_1000"
                 android:background="@drawable/bg_rounded_input_field"
-                android:hint="Amaris Email" />
+                android:hint="Amaris Email"
+                android:text="phoanglong@amaris.com"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -59,7 +67,8 @@
                 android:textColor="@color/md_white_1000"
                 android:background="@drawable/bg_rounded_input_field"
                 android:hint="Password"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:text="phoanglong@amaris.com"/>
 
         </android.support.design.widget.TextInputLayout>
 

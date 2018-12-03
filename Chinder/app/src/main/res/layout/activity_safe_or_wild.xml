@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/game_start"
+    tools:context=".SafeOrWildActivity">
+
+    <RelativeLayout
+        android:id="@+id/filterChoice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="100dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:elevation="8dp"
+                card_view:cardBackgroundColor="@color/amaris"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="10dp"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/safeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/safe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/album" />
+
+                    <TextView
+                        android:id="@+id/safeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/safe"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="22dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="PLAY SAFE"
+                        android:textColor="@color/md_white_1000"
+                        android:textSize="24sp" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/or"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_view"
+                android:layout_margin="40dp"
+                android:text="OR"
+                android:textAlignment="center"
+                android:textColor="@color/md_white_1000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/or"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:elevation="8dp"
+                card_view:cardBackgroundColor="@color/amaris"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="10dp"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/wildLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/wild"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/carnival_mask" />
+
+                    <TextView
+                        android:id="@+id/wildTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wild"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="22dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="GO WILD!"
+                        android:textColor="@color/md_white_1000"
+                        android:textSize="24sp" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
+</RelativeLayout>

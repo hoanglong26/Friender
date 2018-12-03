@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserSetting">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/Toolbar"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Settings"
+                android:textColor="@color/md_black_1000"
+                android:textSize="20sp" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appBar"
+        android:background="@drawable/orange_bg">
+
+        <TextView
+            android:id="@+id/firstText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Long, review your info"
+            android:textAlignment="center"
+            android:textColor="@color/md_white_1000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/secondText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstText"
+            android:layout_marginTop="5dp"
+            android:text="...to find your best friends in Amaris!"
+            android:textAlignment="center"
+            android:textColor="@color/md_white_1000"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_below="@id/header"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/avatar"
+        android:layout_centerHorizontal="true"
+        app:civ_fill_color="@color/md_grey_400"
+        app:civ_border_width="1dp"
+        app:civ_border_color="#00ffffff"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <!--GENERAL-->
+    <TextView
+        android:id="@+id/general"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_image"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="9"
+        android:gravity="start"
+        android:padding="10dp"
+        android:text="GENERAL"
+        android:textColor="@color/md_grey_500"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/office1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/general"
+        android:background="@color/md_white_1000"
+        android:orientation="vertical">
+
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_grey_200"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dip" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="9"
+                android:gravity="start"
+                android:text="My Office"
+                android:textColor="@color/md_grey_600"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="AMAVN - Viettel Building"
+                android:textColor="@color/amaris"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_grey_200"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/department1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/office1"
+        android:background="@color/md_white_1000"
+        android:orientation="vertical">
+
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_grey_200"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dip" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="9"
+                android:gravity="start"
+                android:text="Department"
+                android:textColor="@color/md_grey_600"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Product Management"
+                android:textColor="@color/amaris"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_grey_200"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/language1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/department1"
+        android:background="@color/md_white_1000"
+        android:orientation="vertical">
+
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_grey_200"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dip" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="9"
+                android:gravity="start"
+                android:text="Languages"
+                android:textColor="@color/md_grey_600"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="English, Japanese"
+                android:textColor="@color/amaris"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_edit"/>
+        </LinearLayout>
+
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_grey_200"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dip" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/interest1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/language1"
+        android:background="@color/md_white_1000"
+        android:orientation="vertical">
+
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_grey_200"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dip" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="9"
+                android:gravity="start"
+                android:text="Interests"
+                android:textColor="@color/md_grey_600"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/choiceTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Travel, Dog, Listening music"
+                android:textColor="@color/amaris"
+                android:textSize="14sp" >
+            </TextView>
+
+            <ImageView
+                android:id="@+id/interestChoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_edit"/>
+        </LinearLayout>
+
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+
+            android:background="@color/md_grey_200"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dip" />
+    </LinearLayout>
+
+    <!--PRIVACY-->
+    <TextView
+        android:id="@+id/privacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/interest1"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="9"
+        android:gravity="start"
+        android:padding="10dp"
+        android:text="PRIVACY"
+        android:textColor="@color/md_grey_500"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/pushNoti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/privacy"
+        android:background="@color/md_white_1000"
+        android:orientation="vertical">
+
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+
+            android:background="@color/md_grey_200"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dip" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="9"
+                android:gravity="start"
+                android:text="Push notifications"
+                android:textColor="@color/md_grey_600"
+                android:textSize="14sp" />
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/switch_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sb_background="@color/md_grey_50"
+                app:sb_checked_color="@color/amaris"
+                app:sb_uncheckcircle_color="@color/amaris" />
+        </LinearLayout>
+
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_grey_200"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/groupSuggest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pushNoti"
+        android:background="@color/md_white_1000"
+        android:orientation="vertical">
+
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_grey_200"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dip" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="9"
+                android:gravity="start"
+                android:text="Group Suggestions"
+                android:textColor="@color/md_grey_600"
+                android:textSize="14sp" />
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/switch_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sb_background="@color/md_grey_50"
+                app:sb_checked_color="@color/amaris"
+                app:sb_uncheckcircle_color="@color/amaris" />
+        </LinearLayout>
+
+        <TextView
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_grey_200"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dip" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_below="@id/groupSuggest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/gradient"
+        android:paddingLeft="50dp"
+        android:paddingTop="10dp"
+        android:paddingRight="50dp"
+        android:paddingBottom="10dp"
+        android:text="NEXT"
+        android:textColor="@color/md_white_1000"
+        android:textSize="16sp" />
+
+</RelativeLayout>

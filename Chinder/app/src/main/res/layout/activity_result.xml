@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/navigation"
+        >
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/result_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/result_wild"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/match_section2"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/result_safe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/result_wild"
+                        android:src="@drawable/match_section1" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/chatNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/result_area"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/gradient"
+                    android:paddingLeft="80dp"
+                    android:paddingTop="20dp"
+                    android:paddingRight="80dp"
+                    android:paddingBottom="20dp"
+                    android:text="CHAT NOW"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/chatNow"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/gradient2"
+                    android:paddingLeft="100dp"
+                    android:paddingTop="20dp"
+                    android:paddingRight="100dp"
+                    android:paddingBottom="20dp"
+                    android:text="BACK"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </FrameLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
+</RelativeLayout>

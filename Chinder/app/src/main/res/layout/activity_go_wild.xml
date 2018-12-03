@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.amaris.hoanglong.chinder.GoWildActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/Toolbar"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Anonymous Matching"
+                android:textColor="@color/md_black_1000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigation"
+        android:layout_below="@id/appBar"
+        android:background="@color/md_grey_100"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/loadingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/amarisLight"
+            android:visibility="invisible">
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/loading"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                app:indicatorName="BallZigZagDeflectIndicator" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/loading"
+                android:layout_marginTop="20dp"
+                android:text="Surprise is coming..."
+                android:textAlignment="center"
+                android:textColor="@color/md_white_1000"
+                android:textSize="22sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/matchedChoice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/matchingLayout"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/penguin"
+                    android:layout_centerHorizontal="true"
+                    app:civ_fill_color="@color/md_grey_400"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@color/md_grey_400"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/matched"
+                    android:layout_below="@id/profile_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="You are matched with"
+                    android:textAlignment="center"
+                    android:textColor="@color/md_grey_800"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/matchedName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/matched"
+                    android:layout_centerInParent="true"
+                    android:text="Anonymous Penguin"
+                    android:textAlignment="center"
+                    android:textColor="@color/md_grey_900"
+                    android:textSize="30sp"
+                    android:layout_marginBottom="20dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/matchedName"
+                    android:layout_centerInParent="true">
+
+                    <Button
+                        android:id="@+id/chatting"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/gradient"
+                        android:paddingLeft="40dp"
+                        android:paddingTop="16dp"
+                        android:paddingRight="40dp"
+                        android:paddingBottom="16dp"
+                        android:text="START CHATTING NOW"
+                        android:textAllCaps="false"
+                        android:textColor="@color/md_white_1000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/or"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/chatting"
+                        android:layout_margin="10dp"
+                        android:text="OR"
+                        android:textAlignment="center"
+                        android:textColor="@color/md_grey_600"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/breakTheIce"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/or"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/gradient2"
+                        android:paddingLeft="40dp"
+                        android:paddingTop="16dp"
+                        android:paddingRight="40dp"
+                        android:paddingBottom="16dp"
+                        android:text="BREAK THE ICE"
+                        android:textAllCaps="false"
+                        android:textColor="@color/md_white_1000"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
+</RelativeLayout>

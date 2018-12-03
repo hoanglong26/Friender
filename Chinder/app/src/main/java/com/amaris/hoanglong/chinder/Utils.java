@@ -43,7 +43,6 @@ public class Utils {
             }
             return imageList;
         }catch (Exception e){
-            Log.d(TAG,"seedGames parseException " + e);
             e.printStackTrace();
             return null;
         }

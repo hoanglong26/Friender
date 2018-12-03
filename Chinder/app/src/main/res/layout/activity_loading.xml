@@ -17,11 +17,11 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40sp"
-        android:text="aFriend"
+        android:text="aBuddy"
         android:textAlignment="center"
         android:textColor="#EE6723"
         android:textSize="40sp"
-        android:textStyle="" />
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
         android:text="Meet the people of Amaris"
         android:textAlignment="center"
         android:textColor="#EE6723"
-        android:textSize="15sp" />
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/loginNow"
